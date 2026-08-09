@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="My Tasks"
+    >
+
+    <title>Yesuf's Tasks</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =========================
+         HEADER / LOGO
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="logo-box">
+
+                <img
+                    src="assets/logo.png"
+                    alt="App Logo"
+                    onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';"
+                >
+
+                <div
+                    id="logoFallback"
+                    class="logo-fallback"
+                >
+                    ✓
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h1>Baravo Yesuf:)</h1>
+
+                <p>Plan your day!</p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CALENDAR
+    ========================== -->
+
+    <section class="calendar-card">
+
+        <div class="calendar-top">
+
+            <button
+                id="previousMonth"
+                class="month-button"
+            >
+                ‹
+            </button>
+
+
+            <h2 id="monthYear">
+                August 2026
+            </h2>
+
+
+            <button
+                id="nextMonth"
+                class="month-button"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        <div class="weekdays">
+
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+
+        </div>
+
+
+        <div
+            id="calendar"
+            class="calendar"
+        ></div>
+
+
+        <p class="drag-help">
+            Drag a task onto a calendar date to move it
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         TASK AREA
+    ========================== -->
+
+    <main class="tasks-area">
+
+
+        <div class="task-heading">
+
+            <div>
+
+                <span>Tasks for</span>
+
+                <h2 id="selectedDate">
+                    Today
+                </h2>
+
+            </div>
+
+
+            <div
+                id="taskCount"
+                class="task-count"
+            >
+                0
+            </div>
+
+        </div>
+
+
+
+        <!-- ADD TASK -->
+
+        <div class="add-task">
+
+            <input
+                id="taskInput"
+                type="text"
+                placeholder="Add a task..."
+                autocomplete="off"
+            >
+
+            <button
+                id="addTaskButton"
+                type="button"
+            >
+                +
+            </button>
+
+        </div>
+
+
+
+        <!-- TASKS -->
+
+        <div
+            id="taskList"
+            class="task-list"
+        ></div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         BOTTOM NAV
+    ========================== -->
+
+    <nav class="bottom-nav">
+
+        <button
+            id="todayButton"
+            class="nav-button active"
+        >
+
+            <span>⌂</span>
+
+            <small>Today</small>
+
+        </button>
+
+
+        <button
+            id="calendarButton"
+            class="nav-button"
+        >
+
+            <span>▣</span>
+
+            <small>Calendar</small>
+
+        </button>
+
+
+        <button
+            id="focusButton"
+            class="nav-button"
+        >
+
+            <span>✓</span>
+
+            <small>Tasks</small>
+
+        </button>
+
+    </nav>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
